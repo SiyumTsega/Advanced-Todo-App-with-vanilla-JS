@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Todo App</title>
+  </head>
+  <body>
+    <h1 class="title">Stuff I need to do</h1>
+    <div class="all-tasks">
+      <div class="task-list-title">
+        <h2>My lists</h2>
+      </div>
+      <ul class="task-list" data-lists></ul>
+      <form action="" data-new-list-form>
+        <input
+          type="text"
+          class="new list"
+          data-new-list-input
+          placeholder="new list name"
+          aria-label="new list name"
+        />
+        <button class="btn create">+</button>
+      </form>
+    </div>
+    <div class="todo-list" data-todo-list>
+      <div class="todo-header">
+        <h2 class="list-title" data-todo-title>Youtube</h2>
+        <p class="task-count" data-todo-count>3 tasts remaining</p>
+      </div>
+      <div class="todo-body">
+        <div class="tasks" data-tasks-container></div>
+        <div class="new-task-creator">
+          <form action="" data-new-task-form>
+            <input
+              type="text"
+              class="new task"
+              data-new-task-input
+              placeholder="new task name"
+              aria-label="new task name"
+            />
+            <button class="btn create">+</button>
+          </form>
+        </div>
+        <div class="delete-stuff">
+          <button class="btn delete" data-clear-complete-task-btn>
+            Clear completed task
+          </button>
+          <button class="btn delete" data-delete-list-button>
+            Delete list
+          </button>
+        </div>
+      </div>
+    </div>
+    <template id="task-template">
+      <div class="task">
+        <input type="checkbox" />
+        <label>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </template>
+  </body>
+</html>
